@@ -290,6 +290,50 @@
             border-color: var(--primary-color);
         }
         
+        /* Project details styling */
+        .project-details {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(76, 110, 245, 0.1);
+        }
+        
+        .project-details h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            margin-top: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .project-details h4:first-child {
+            margin-top: 0;
+        }
+        
+        .project-details ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 15px 0;
+        }
+        
+        .project-details li {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: rgba(248, 249, 250, 0.7);
+            margin-bottom: 5px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .project-details li::before {
+            content: '•';
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
         /* Year separator for chronological order */
         .year-separator {
             grid-column: 1 / -1;
@@ -384,40 +428,83 @@
             
             <!-- Projects displayed in reverse chronological order (newest first) -->
             <div class="project-grid">
-                <!-- 2023 Projects (or whichever year is most recent) -->
-                <div class="year-separator">
-                    <h2 class="year-label">2023</h2>
-                </div>
-                
-                <!-- Essay (assuming it's from 2023) -->
+                <!-- ReplyGenius Project -->
                 <div class="project-card">
-                    <img src="images/essay-thumbnail.jpg" alt="Essay Title" class="project-image">
                     <div class="project-content">
-                        <div class="project-date">November 2023</div>
-                        <h3 class="project-title">Your Essay Title</h3>
+                        <div class="project-date">2024</div>
+                        <h3 class="project-title">ReplyGenius</h3>
                         <p class="project-description">
-                            Brief description of your essay. What topics does it cover and why is it important?
+                            An automated customer inquiry response system that integrates with Gmail to provide intelligent, context-aware email responses using RAG (Retrieval-Augmented Generation) technology and Anthropic Claude.
                         </p>
                         <div class="project-tags">
-                            <span class="project-tag">Topic 1</span>
-                            <span class="project-tag">Topic 2</span>
-                            <span class="project-tag">Essay</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Gmail API</span>
+                            <span class="project-tag">RAG</span>
+                            <span class="project-tag">Anthropic Claude</span>
+                            <span class="project-tag">OAuth 2.0</span>
+                            <span class="project-tag">Email Automation</span>
                         </div>
-                        <a href="projects/essay.html" class="view-project">Read Essay</a>
+                        <div class="project-details">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Automatic Gmail monitoring for unread messages</li>
+                                <li>Semantic search for business context retrieval</li>
+                                <li>AI-powered response generation using Claude</li>
+                                <li>Conversation history tracking</li>
+                                <li>Customer management system</li>
+                                <li>Safety filters for testing environments</li>
+                            </ul>
+                            <h4>Technical Stack:</h4>
+                            <ul>
+                                <li>Google Cloud Platform & Gmail API</li>
+                                <li>OAuth 2.0 authentication</li>
+                                <li>RAG (Retrieval-Augmented Generation)</li>
+                                <li>Anthropic Claude integration</li>
+                                <li>Database-driven conversation storage</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Other 2023 projects would go here, in reverse chronological order -->
-                
-                <!-- For projects from previous years -->
-                <div class="year-separator">
-                    <h2 class="year-label">2022</h2>
+                <!-- Alzheimers Prediction Project -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <div class="project-date">2024</div>
+                        <h3 class="project-title">Alzheimers Prediction Pipeline</h3>
+                        <p class="project-description">
+                            A comprehensive machine learning pipeline that automates testing of multiple ML methods on a global Alzheimers dataset spanning 20 countries, with API exposure and Docker containerization.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">Machine Learning</span>
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">DVC</span>
+                            <span class="project-tag">Docker</span>
+                            <span class="project-tag">API</span>
+                            <span class="project-tag">MLOps</span>
+                        </div>
+                        <div class="project-details">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Automated ML pipeline testing multiple algorithms</li>
+                                <li>Global dataset analysis (20 countries)</li>
+                                <li>Data version control with DVC</li>
+                                <li>RESTful API exposure</li>
+                                <li>Docker containerization</li>
+                                <li>Virtual environment management</li>
+                            </ul>
+                            <h4>Technical Stack:</h4>
+                            <ul>
+                                <li>Python ML libraries (scikit-learn, pandas, numpy)</li>
+                                <li>DVC for data version control</li>
+                                <li>Flask for API development</li>
+                                <li>Docker for containerization</li>
+                                <li>Virtual environment management</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- 2022 projects would go here -->
             </div>
         </div>
     </div>
 </body>
-</html> 
 </html> 
